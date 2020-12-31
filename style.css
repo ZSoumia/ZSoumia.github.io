@@ -24,7 +24,7 @@
 -------------------------------------------------------------------*/
 
 body {
-    color: black;
+    background-color: #232323;
     font-size: 14px;
     font-family: 'Roboto Mono', monospace;
     line-height: 1.80857;
@@ -84,7 +84,7 @@ h6 {
     padding: 0 0 10px 0;
     font-weight: normal;
     line-height: 120% !important;
-    color: #333333;
+    color: #eed202;
     margin: 0
 }
 
@@ -486,11 +486,11 @@ xclip
 }
 
 .section.wb {
-    background-color: #ffffff;
+    background-color: #232323;
 }
 
 .section.lb {
-    background-color: #f2f3f5;
+    background-color: #232323;
 }
 
 .section.db {
@@ -542,7 +542,7 @@ xclip
 }
 
 .section-title p {
-    color: #999;
+    color: #c9c9c9;
     font-weight: 400;
     font-size: 18px;
     line-height: 33px;
@@ -561,7 +561,7 @@ xclip
 .section.colorsection p,
 .section.colorsection h3,
 .section.db h3 {
-    color: #ffffff;
+    color: white;
 }
 
 
@@ -587,6 +587,7 @@ xclip
 	margin-left: auto;
 	margin-top: 0px;
 	cursor: pointer;
+	background-color:#a1a0a8;
 }
 
 .btn-hover-new::after {
@@ -1210,6 +1211,7 @@ xclip
 
 .message-box p {
     margin-bottom: 20px;
+    color:white;
 }
 
 .message-box .lead {
