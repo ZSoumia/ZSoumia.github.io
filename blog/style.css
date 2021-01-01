@@ -1,0 +1,62 @@
+/*------------------------------------------------------------------
+    Version: 1.0
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+    IMPORT FONTS
+-------------------------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:300,400,500,700');
+
+/*------------------------------------------------------------------
+    IMPORT FILES
+-------------------------------------------------------------------*/
+
+@import url(css/animate.css);
+@import url(css/camera.css);
+@import url(css/flaticon.css);
+@import url(css/prettyPhoto.css);
+@import url(css/owl.carousel.css);
+@import url(css/font-awesome.min.css);
+
+/*---------------------------------------------------------------------
+CONTENT DIV
+-----------------------------------------------------------------------*/
+#content{
+    color: antiquewhite;
+    width: 60%;
+    bottom:20%;
+    top: 10%;
+    margin-bottom: 10%;
+    padding: 5%;
+    border: 5px solid#393f4d;
+    position:relative ;
+    left: 20%;
+
+
+    background-color: #1d1e22;
+   
+}
+
+#title{
+
+    text-align: center;
+    font-size: 80px!important;
+    color: #feda6a !important;
+}
+#info{
+    text-align: center;
+    color: #fff666!important;
+
+}
+#centerImage{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#ref{
+    color:#ff9933;
+    font-weight: bold;
+    font-style: oblique;
+}

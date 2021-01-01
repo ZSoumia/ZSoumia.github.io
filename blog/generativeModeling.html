@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+   
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ 
+     <!-- Site Metas -->
+    <title>Soumia Zohra El Mestari| Personal WebSite</title>
+    <meta name="keywords" content="Generative models;Generative modeling;GANs;VAE;">
+    <meta name="description" content="">
+    <meta name="author" content="soumia-zohra-el-mestari">
+
+    <!-- trying -->
+    <link href="../lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+    <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../style.css">
+    <link href="style.css" rel="stylesheet">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="../css/responsive.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/custom.css">
+	<script src="js/modernizr.js"></script> <!-- Modernizr -->
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="page-top" class="politics_version">
+
+    <!-- LOADER -->
+    <div id="preloader">
+        <div id="main-ld">
+			<div id="loader"></div>  
+		</div>
+    </div><!-- end loader -->
+    <!-- END LOADER -->
+	
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+      <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">
+			<!--<img class="img-fluid" src="images/logo.png" alt="" /> -->
+		</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          Menu
+          <i class="fa fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav text-uppercase ml-auto">
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger active" href="../index.html#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#services">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#testimonials">Testimonials</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#blog">Blog</a>
+            </li>
+			<li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="../index.html#contact">Contact Me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div id="content" class="section lb">
+      <h2 id="title">Generative Models </h2>
+      <p id="info">"A general overview" <br> 
+        Jan 1,2021 <br>
+       </p> 
+
+      <img src="images/cats_small_1.gif" class="img-fluid"id="centerImage" alt="Image" />
+      <br>
+      <div id= "intro">
+       
+        <h3>Introduction</h3>
+        <p>
+          Generative models are a type of neural networks dedicated for generating new data point examples. This task goes beyond the traditional 
+          pattern caputring that we find in all Neural Networks to learning the underlying distribution. 
+          This type of neural networks are excellent in tasks that require filling the blanks in data; they learn the trend/probability distribution
+          that these data follow and hence can generate the missing ones so that they follow the same probability distribution.
+          The goal of such models is either to generate data (text, audio, image, video etc.) from scratch Generating a new story, 
+          script for a TV show or even photos of faces or to transform the data to conform to a specific target like denoising a given image.
+          Once a generative model is fully trained, it can be used to create new data that’s indistinguishable from 
+          the training set data.
+        </p>
+        
+
+      </div>
+      <div id= "intro">
+       
+        <h3>Types of Generative models</h3>
+        <img src="images/generative_models.jpg" class="img-fluid"id="centerImage" alt="Image"  />
+        <br>
+        <p>
+        Generative models are able to model very complex high dimensional distributions in two ways:
+        <h4>Explicitly:</h4>
+        In an explicit estimation we know the model’s probabilistic distribution.This Density can have a close form and be solvable in a polynomial time
+        (A.K.A tractable) like in <a id="ref" href="https://arxiv.org/abs/1601.06759">PixelRNN[1]</a>. In PixelRNNs a network is trained to model the 
+        conditional distribution of every individual pixel given previous pixels(to the left and to the top). This is similar to plugging the pixels 
+        of the image into a char-rnn, but the RNNs run both horizontally and vertically over the image instead of just a 1D sequence of characters.
+        If the density doesn't have a close form (Intractable) we then need to  approximate it.<br> <a id="ref" href="https://arxiv.org/abs/1312.6114">
+        Variational AutoEncoders[2]</a> approximate those intractable conditional distributions. It's a probabilistic graphical modeling where we are 
+        maximizing a lower bound on the log likelihood of the data.
+        <br><br>
+        <h4>Implicitly:</h4>
+        In this category the model learning process is based on a very strict penalty strategy known as Adversarial training presented in the earlier work
+        of GoodFellow <a id="ref" href="https://arxiv.org/abs/1406.2661">Generative Adversarial Networks[3].</a> <br>
+    
+        The training process for GANs is seen as as a game(<a id="ref" href="https://arxiv.org/abs/1606.03498" >Game Theory[4]</a>) between two separate 
+        networks: 
+        a generator network to generate new  items and a second discriminative network that tries to classify samples as either coming from the true
+         distribution p<sub>(x)</sub> or the model distribution $\hat{p}(x)$. Every time the discriminator notices a difference between 
+         the two distributions the generator adjusts its parameters slightly to make it go away, until at the end (in theory) the generator exactly
+        reproduces the true data distribution and the discriminator is guessing at random, unable to find a difference(This state is called the 
+        "Equilibrium Point" as described in <a id="ref" href="https://arxiv.org/abs/1606.03498">Saliman's work[4]</a>).
+
+        </p>
+        <h3>Between these two ? </h3>
+        <p>
+        Explicit estimation tend to result in very blurry results compared with the implicit density estimation. GANs give  more accurate results 
+        compared to VAEs for eg. This is due to the penalty strategy,  GANs are trained in a adversarial way which lead to the loss itself 
+        being competitive. The game theory behind the GANs enable them to target more tangible features in order to reach the equilibrium 
+        point. The main advantage of  GANs over the other generative
+        models in generating data is that they can be conditioned by different inputs. For example, you can learn the mapping between two domains
+        : satellite images to google maps. Or you can teach the generator to reproduce several classes of data: generating the MNIST dataset.
+
+        Autoencoders are more suitable for compressing data to lower dimensions or generating semantic vectors from it. Where  GANs are 
+        more suitable for generating data.
+        </p>
+        <h3>Conclusion : </h3>
+        Generative models continue to be a subject of improuvement and current research item. This type of neural networks allow us to answer more 
+        vibrant questions like: what are the underlying features of a given dataset? Answers to this question can reveal biases within the data we use 
+        to train our models. Bias in data makes the fairness of any model questionable. <br>
+        Another cool use case would be in data compression as well if we learn to estimate the true distribution of a given dataset then we can regenerate 
+        bigger chunks/parts of data using less inputs. 
+        This first blog post serves as a global overview of what generative models are. 
+
+      </div>
+     
+    </div>
+	
+	
+
+<!-- Contact + footer -->
+
+    <div id="contact" class="section db">
+        <div class="container">
+            <!-- end title -->
+
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="contact-mf">
+                    <div id="contact" class="box-shadow-full">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="title-box-2">
+                            <h5 class="title-left">
+                              Let's talk !
+                            </h5>
+                            <ul class="list-ico">
+                              <li><span class="ion-ios-location"></span> Sidi Bel Abbes, Algeria</li>
+                              <li><span class="ion-email"></span> s.elmestari@esi-sba.dz</li>
+                            </ul>
+                          </div>
+                          <div class="socials">
+                            <ul>
+                              <li><a href="https://www.linkedin.com/in/soumia-zohra-el-mestari/"><span class="ico-circle"><i class="ion-social-linkedin"></i></span></a></li>
+                              <li><a href="https://github.com/ZSoumia"><span class="ico-circle"><i class="ion-social-github"></i></span></a></li>
+                              <li><a href="https://twitter.com/mes_sou"><span class="ico-circle"><i class="ion-social-twitter"></i></span></a></li>
+                            </ul>
+                          </div>
+        
+                        </div>
+                        <div class="col-md-6">
+                          <div class="title-box-2 pt-4 pt-md-0">
+                            <h5 class="title-left">
+                              Get in Touch
+                            </h5>
+                          </div>
+                          <div class="col-md-12">
+                            <p class="h5 text-black" >
+                              I would love to get to know you maybe we can work on a project together or enjoy some tea !
+                            </p>
+                          </div>
+        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        </div><!-- end container -->
+    </div><!-- end section -->
+
+    
+
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">About</a>
+                        <a href="#">Faq</a>
+                        <a href="#">Contact</a>
+                    </p>
+                    <p class="footer-company-name">All Rights Reserved. &copy; 2020  Design By :
+					<a href="#">Soumia Zohra El Mestari</a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+
+
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+
+    <!-- ALL JS FILES -->
+    <script src="../js/all.js"></script>
+	<!-- Camera Slider -->
+	<script src="../js/jquery.mobile.customized.min.js"></script>
+	<script src="../js/jquery.easing.1.3.js"></script> 
+	<script src="../js/parallaxie.js"></script>
+	<script src="../js/headline.js"></script>
+	<!-- Contact form JavaScript -->
+    <script src="../js/jqBootstrapValidation.js"></script>
+    <script src="../js/contact_me.js"></script>
+    <!-- ALL PLUGINS -->
+    <script src="../js/custom.js"></script>
+    <script src="../js/jquery.vide.js"></script>
+
+</body>
+</html>
